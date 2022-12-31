@@ -37,6 +37,7 @@ export default {
         border-bottom: 1px inset rgba(255, 255, 255, 0.113);
         color: rgba(255, 255, 255, 0.441);
         z-index: 2;
+        backdrop-filter: blur(7.7px)
     }
 
     ul{
@@ -62,6 +63,7 @@ export default {
        
         height: 3em;
     }
+
 
     
 </style>

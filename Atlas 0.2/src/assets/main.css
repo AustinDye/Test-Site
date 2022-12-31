@@ -9,3 +9,8 @@
     src: url(Exo2-VariableFont_wght.ttf);
   }
 
+  @font-face {
+    font-family: ultra;
+    src: url(Ultra.otf);
+  }
+
