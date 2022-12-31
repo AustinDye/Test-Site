@@ -11,15 +11,18 @@ export default {
     }
   },
   mounted() {
+
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
-    }           
-    var canvas = document.getElementById("starfield"),
+    }     
+
+    let canvas = document.getElementById("starfield"),
     context = canvas.getContext("2d"),
     stars = 1000,
     colorrange = [0,60,240];
-    for (var i = 0; i < stars; i++) {
-        var x = Math.random() * canvas.offsetWidth;
+
+    for (let i = 0; i < stars; i++) {
+        let x = Math.random() * canvas.offsetWidth;
         let y = Math.random() * canvas.offsetHeight,
         radius = Math.random() * 1.2,
         hue = colorrange[getRandom(0,colorrange.length - 1)],
@@ -30,54 +33,53 @@ export default {
         context.fill();
     }
 
-    var test = document.getElementById('moon');
-window.addEventListener('scroll', function(e) {
-  
-  var scroll = window.pageYOffset || document.documentElement.scrollTop ||
-                document.body.scrollTop || 0;
-  test.style.opacity = Math.max(0, Math.min(1, -scroll / 400 + 1));
-});
+    let test2 = document.getElementById('moon');
+    window.addEventListener('scroll', function(e) {
+    
+        let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        test2.style.opacity = Math.max(0, Math.min(1, -scroll / 500 + 1));
+    });
 
+    const firstTween= KUTE.fromTo(
+        '#primary-wave-1',
+        { path: '#primary-wave-1' },
+        { path: '#secondary-wave-2' },
+        { repeat: 999, duration: 3000, yoyo: true }
+    ).start();
 
-const firstTween= KUTE.fromTo(
-    '#primary-wave-1',
-    { path: '#primary-wave-1' },
-    { path: '#secondary-wave-2' },
-    { repeat: 999, duration: 3000, yoyo: true }
-).start();
+    const secondTween= KUTE.fromTo(
+        '#primary-wave-2',
+        { path: '#primary-wave-2' },
+        { path: '#secondary-wave-1' },
+        { repeat: 999, duration: 3000, yoyo: true }
+    ).start();
 
-const secondTween= KUTE.fromTo(
-    '#primary-wave-2',
-    { path: '#primary-wave-2' },
-    { path: '#secondary-wave-1' },
-    { repeat: 999, duration: 3000, yoyo: true }
-).start();
-
-const thirdTween= KUTE.fromTo(
-    '#primary-wave-3',
-    { path: '#primary-wave-3' },
-    { path: '#secondary-wave-1' },
-    { repeat: 999, duration: 3000, yoyo: true }
-).start();
-
+    const thirdTween= KUTE.fromTo(
+        '#primary-wave-3',
+        { path: '#primary-wave-3' },
+        { path: '#secondary-wave-1' },
+        { repeat: 999, duration: 3000, yoyo: true }
+    ).start();
 
 }
 
-
-  
 }
 
 </script>
 
 <template>
-<div class="container d-flex justify-content-center align-items-center p-5" >
+<div class="container d-flex justify-content-center space-wrapper" >
     <canvas id="starfield" width="750" height="500"></canvas>
     <div class="row">
-        <div class="col-8 d-flex justify-content-center ">
-            <p class="intro-text"><i class=""></i> <br>Shine bright amidst a sea of stars</p>
+        <div class="company-name text-white">
+           <p class="intro-text">         
+            Δέδυκε μὲν ἀ σελάννα
+            καὶ Πληΐαδες, μέσαι δέ
+            νύκτες, πάρα δ' ἔρχετ' ὤρα,
+            ἔγω δὲ μόνα κατεύδω.</p>
         </div>
-        <div id="moon" class="background-shape align-self-center"></div>
     </div>
+    <div id="moon" class="background-shape align-self-center"></div>
     <div class="custom-shape-divider-bottom-1672475196">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path id="primary-wave-1" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -88,14 +90,38 @@ const thirdTween= KUTE.fromTo(
             <path id="secondary-wave-3" style="visibility: hidden" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
         </svg>
     </div>
-   
-    
+</div>
+<div class="container d-flex justify-content-center">
+    <div class="about"></div>
+    <div class="row ">
+        <div class="col-6">
+            UWU WORLD
+        </div>
+        <div class="col-6"></div>
+    </div>
 </div>
 
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
+.space-wrapper {
+    min-height: 85vh;
+ 
+}
+
+
+
+.company-name {
+  
+}
+
+.about{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(243, 243, 243);
+    position: absolute;
+}
 
 .custom-shape-divider-bottom-1672475600 {
     position: absolute;
@@ -150,13 +176,15 @@ const thirdTween= KUTE.fromTo(
     color: white;
     opacity: 1;
     font-family: 'Ultra', sans-serif;
-   
+    width: 50vw;
     text-shadow:
     /* White glow */
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff;
-    font-size: 5em;
+    font-size: 3em;
+    position: absolute;
+    left: 10vw;
     
 }
 
@@ -165,7 +193,7 @@ const thirdTween= KUTE.fromTo(
     height: 10vw; 
     border-radius: 50% 50% 50% 50%;
     z-index: -1;
-    background-image: url('../assets/580b585b2edbce24c47b270b.png');
+    background-image: url('../assets/Untitled.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -173,8 +201,8 @@ const thirdTween= KUTE.fromTo(
     position: fixed;
     filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) invert(20%);
     
-    right: 5%;
-    top: 25%;
+    right: 10vw;
+    top: 20%;
   
 }
 
@@ -219,9 +247,6 @@ canvas {
 }
 
 @keyframes move-crescent {
-    
-       
         
-    
 }
 </style>

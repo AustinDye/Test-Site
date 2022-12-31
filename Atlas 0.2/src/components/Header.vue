@@ -1,6 +1,6 @@
 <template>
-    <div class="wrapper">
-  <div class="header nav fixed-top">
+<div class="wrapper" >
+  <div id="header" class="header nav fixed-top">
     <div class="row w-100 p-2">
         <div class="col-4 d-flex justify-content-center align-items-center">
             <img class="logo-icon px-1" src="../assets/logostarz.png" alt="">
@@ -37,8 +37,17 @@ export default {
         border-bottom: 1px inset rgba(255, 255, 255, 0.113);
         color: rgba(255, 255, 255, 0.441);
         z-index: 2;
-        backdrop-filter: blur(7.7px)
+        backdrop-filter: blur(7.7px);
+        opacity: 1;
     }
+    .logo{
+        width: 30%;
+    }
+    .logo-icon{
+        width: 20%;
+    }
+
+
 
     ul{
         margin: auto;
@@ -59,10 +68,7 @@ export default {
         color: white;
     }
 
-    .logo, .logo-icon {
-       
-        height: 3em;
-    }
+   
 
 
     
