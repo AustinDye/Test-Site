@@ -33,11 +33,11 @@ export default {
         context.fill();
     }
 
-    let test2 = document.getElementById('moon2');
+    let test2 = document.getElementById('moon');
     let transitionEl = document.getElementById('moon2');
     let introText = document.getElementById('introtext');
-    let introSub = document.getElementById('sub-text')
-
+    let introSub = document.getElementById('sub-text');
+    let starfield = document.getElementById('starfield');
     window.addEventListener('scroll', function(e) {
     
         let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -45,7 +45,8 @@ export default {
         test2.style.opacity = Math.max(0, Math.min(1, -scroll / 500 + 1));
         introText.style.opacity = Math.max(0, Math.min(1, -scroll / 100 + 1));
         introSub.style.opacity = Math.max(0, Math.min(1, -scroll / 180 + 1));
-
+        transitionEl.style.opacity = Math.max(0, Math.min(1, -scroll / 500 + 1));
+        
         if(scroll > 10)
         {
             transitionEl.style.margin = scroll.toString() +  'px';
@@ -54,10 +55,19 @@ export default {
         if(scroll > 20)
         {
             introText.style.color = 'black';
+        
+        }
+
+        if(scroll > 100)
+        {
+            starfield.style.opacity = '1'
+            
         }
         else {
-            transitionEl.style.margin = '0';
             introText.style.color = 'white';
+            starfield.style.opacity = '0'
+            transitionEl.style.margin = '0px';
+     
         }
     });
 
@@ -71,7 +81,7 @@ export default {
 </script>
 
 <template>
-<canvas id="starfield" height="800px" width="800px"></canvas>
+<canvas id="starfield" height="800px" width="1000px"></canvas>
 
 <div class="container d-flex justify-content-center align-items-center" >
     <div class="row justify-content-center ">
@@ -96,6 +106,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
 
+#starfield {
+    opacity: 0;
+    transition: all 1s;
+}
+
 .dumbpy {
     height: 100vh;
 }
@@ -110,7 +125,7 @@ canvas {
 }
 
 .intro-text{
-    padding-top:25vh ;
+    padding-top:35vh ;
     color: white;
     opacity: 1;
     z-index: 2;
@@ -120,7 +135,7 @@ canvas {
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff;
-    font-size: 6em;
+    font-size: 5em;
     transition: color .5s;
 }
 
@@ -128,6 +143,11 @@ canvas {
     font-family: 'Ultra', sans-serif;
     color: white;
     font-size: 3em;
+     text-shadow:
+    /* White glow */
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff;
 }
 
 .background-shape, .background-shape-2{
@@ -142,11 +162,13 @@ canvas {
     background-size: contain;
     overflow: hidden;
     position: fixed;
-    filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) ;
+    filter: drop-shadow(0px 0px 15px rgb(255, 255, 255));
     animation: glow 5s infinite;
-    transition: all 200ms;
+    transition: margin 200ms;
+  
     
 }
+
 .background-shape-2 {
 
     background-color: black;
