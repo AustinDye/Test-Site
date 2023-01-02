@@ -6,5 +6,6 @@ import Header from '../components/Header.vue'
 <template>
   <main>
     <Landing />
+    
   </main>
 </template>
