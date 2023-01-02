@@ -69,14 +69,12 @@ export default {
 
 <template>
 <div class="container d-flex justify-content-center space-wrapper" >
-    <canvas id="starfield" width="750" height="500"></canvas>
-    <div class="row">
+
+    <div class="row justify-content-center">
         <div class="company-name text-white">
+            <canvas id="starfield" height="1000px" width="1000px"></canvas>
            <p class="intro-text">         
-            Δέδυκε μὲν ἀ σελάννα
-            καὶ Πληΐαδες, μέσαι δέ
-            νύκτες, πάρα δ' ἔρχετ' ὤρα,
-            ἔγω δὲ μόνα κατεύδω.</p>
+           Pleiades</p>
         </div>
     </div>
     <div id="moon" class="background-shape align-self-center"></div>
@@ -91,11 +89,19 @@ export default {
         </svg>
     </div>
 </div>
+
 <div class="container d-flex justify-content-center">
     <div class="about"></div>
     <div class="row ">
-        <div class="col-6">
-            UWU WORLD
+        <div class="spacer"></div>
+        <div class="col-6 d-flex">
+            <div class="text-wrapper">
+                <div class="border-color">
+                    <div class="cards">
+       
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-6"></div>
     </div>
@@ -107,13 +113,72 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
 .space-wrapper {
     min-height: 85vh;
+    
  
 }
 
+.spacer{
+    margin: 5em;
+   
+
+}
+
+canvas{
+    
+}
+
+.border-color{
+    border-radius: .5em;
+    height: 10vh;
+    width: 40vh;
+    padding: .1em;
+    overflow: hidden;
+
+}
+
+@keyframes glow {
+    0%{
+        box-shadow:  0 0 0px 10px rgb(0, 255, 0),
+        0 0 0px 10px rgb(255, 200, 255),
+        0 0 0px 10px rgba(255,0,255,1);
+    }
+
+    25%{
+        box-shadow:  0 0 0px 10px rgb(255, 200, 255),
+        0 0 0px 10px rgba(255,0,255,1) ,
+        0 0 0px 10px rgb(0, 255, 0);
+    }
+    
+    50%{
+        box-shadow:  0 0 0px 10px rgba(255,0,255,1),
+        0 0 0px 10px rgb(255, 200, 255),
+        0 0 0px 10px rgb(0, 255, 0);
+    }
+
+    75%{
+        box-shadow:  0 0 0px 10px rgb(255, 200, 255),
+        0 0 0px 10px rgba(255,0,255,1) ,
+        0 0 0px 10px rgb(0, 255, 0);
+    }
+    100%{
+        box-shadow:  0 0 0px 10px rgb(0, 255, 0),
+        0 0 0px 10px rgb(255, 200, 255),
+        0 0 0px 10px rgba(255,200,255,1);
+    }
+}
 
 
-.company-name {
-  
+.cards{
+   height: 100%;
+   width: 100%;
+   background: rgb(0, 0, 0);
+   border-radius: 1em;
+   background-image: url('../assets/Screenshot 2023-01-01 at 11.13.37 AM.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+
+   
 }
 
 .about{
@@ -121,6 +186,7 @@ export default {
     width: 100vw;
     background: rgb(243, 243, 243);
     position: absolute;
+    z-index: -1;
 }
 
 .custom-shape-divider-bottom-1672475600 {
@@ -183,8 +249,8 @@ export default {
     0 0 10px #fff,
     0 0 21px #fff;
     font-size: 3em;
-    position: absolute;
-    left: 10vw;
+  
+
     
 }
 
@@ -193,14 +259,13 @@ export default {
     height: 10vw; 
     border-radius: 50% 50% 50% 50%;
     z-index: -1;
-    background-image: url('../assets/Untitled.svg');
+   background-color: white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     overflow: hidden;
     position: fixed;
     filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) invert(20%);
-    
     right: 10vw;
     top: 20%;
   

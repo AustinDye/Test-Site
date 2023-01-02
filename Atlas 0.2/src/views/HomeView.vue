@@ -1,11 +1,10 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Landing from '../components/Landing.vue'
 import Header from '../components/Header.vue'
 </script>
 
 <template>
   <main>
-    <Header />
-    <TheWelcome />
+    <Landing />
   </main>
 </template>

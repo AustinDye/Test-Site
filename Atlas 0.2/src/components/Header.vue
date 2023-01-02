@@ -1,5 +1,5 @@
 <template>
-<div class="wrapper" >
+<div class="wrapper" style="visibility: hidden">
   <div id="header" class="header nav fixed-top">
     <div class="row w-100 p-2">
         <div class="col-4 d-flex justify-content-center align-items-center">
