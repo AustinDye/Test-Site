@@ -40,15 +40,15 @@ export default {
 
 <div class="container d-flex justify-content-center align-items-center" >
     <div class="row justify-content-center ">
-        <div class="ps-5 col-12 text-center d-flex justify-content-center align-items-center " >
+        <div class="ps-5 col-12 text-center d-flex justify-content-center align-items-center" >
             <img src="../assets/teamlogo.png" alt="">
             <!--<p class="intro-text" id="introtext">         
                 Pleiades
             </p>
             <p class="sub-header" id="sub-text">ProjectWorks</p>-->
         </div>
-            <div id="moon" class="background-shape align-self-center"></div>
-            <div id="moon2" class="background-shape-2 align-self-center"></div>
+            <div id="moon" class="space-circle align-self-center"></div>
+            <div id="moon2" class="space-circle-2 align-self-center"></div>
              
     </div>
   
@@ -105,7 +105,7 @@ img{
     0 0 21px #fff;
 }
 
-.background-shape, .background-shape-2{
+.space-circle, .space-circle-2{
     top: 10vh;
     width: 40vw; 
     height: 40vw; 
@@ -125,7 +125,7 @@ img{
 
 }
 
-.background-shape-2 {
+.space-circle-2 {
 
 
     background-color: #241e3e;
@@ -152,33 +152,32 @@ img{
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    img {
+        width: 60vw;
+        left: 20vw;
+        top: 30vh;
+    }
+    .space-circle, .space-circle-2{
+        top: 20vh;
+        width: 80vw; 
+        height: 80vw; 
+    }
+}
+
 @media only screen and (max-width: 600px) {
-    .intro-text{
-      
-        font-size: 3em;
-      
-    
-       
+    img {
+        width: 80vw;
+        left: 10vw;
+        top: 10vh;
     }
-
-    .sub-header{
-       
-        font-size: 2em;
-       
-    }
-
-    #starfield {
-        opacity: 0;
-        transition: all 1s;
-        width: 100vw;
-        height: 100vh;
+    .space-circle, .space-circle-2{
+        top: 40vh;
+        width: 60vw; 
+        height: 60vw;
     }
 }
 
-
-@media only screen and (min-width: 600px) {
-
-}
 
 
 
