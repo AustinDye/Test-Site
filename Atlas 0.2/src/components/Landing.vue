@@ -1,7 +1,8 @@
 
 <script>
-
+import router from '../router'
 export default {
+    
   data() {
     return {
       stars: 0,
@@ -12,63 +13,17 @@ export default {
   },
   mounted() {
 
-    function getRandom(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }     
-
-    let canvas = document.getElementById("starfield"),
-    context = canvas.getContext("2d"),
-    stars = 1000,
-    colorrange = [0,60,240];
-
-    for (let i = 0; i < stars; i++) {
-        let x = Math.random() * canvas.offsetWidth;
-        let y = Math.random() * canvas.offsetHeight,
-        radius = Math.random() * 1.2,
-        hue = colorrange[getRandom(0,colorrange.length - 1)],
-        sat = getRandom(50,100);
-        context.beginPath();
-        context.arc(x, y, radius, 0, 360);
-        context.fillStyle = "hsl(" + hue + ", " + sat + "%, 88%)";
-        context.fill();
-    }
-
     let test2 = document.getElementById('moon');
     let transitionEl = document.getElementById('moon2');
-    let introText = document.getElementById('introtext');
-    let introSub = document.getElementById('sub-text');
     let starfield = document.getElementById('starfield');
     window.addEventListener('scroll', function(e) {
     
         let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
         test2.style.opacity = Math.max(0, Math.min(1, -scroll / 500 + 1));
-        introText.style.opacity = Math.max(0, Math.min(1, -scroll / 100 + 1));
-        introSub.style.opacity = Math.max(0, Math.min(1, -scroll / 180 + 1));
-        transitionEl.style.opacity = Math.max(0, Math.min(1, -scroll / 500 + 1));
-        
-        if(scroll > 10)
-        {
-            transitionEl.style.margin = scroll.toString() +  'px';
-           
-        }
-        if(scroll > 20)
-        {
-            introText.style.color = 'black';
-        
-        }
-
-        if(scroll > 100)
-        {
-            starfield.style.opacity = '1'
-            
-        }
-        else {
-            introText.style.color = 'white';
-            starfield.style.opacity = '0'
-            transitionEl.style.margin = '0px';
-     
-        }
+        transitionEl.style.opacity = Math.max(0, Math.min(1, -scroll / 1200 + 1));
+        transitionEl.style.marginTop = scroll.toString() +  'px';
+   
     });
 
 
@@ -81,15 +36,16 @@ export default {
 </script>
 
 <template>
-<canvas id="starfield" height="800px" width="1000px"></canvas>
+
 
 <div class="container d-flex justify-content-center align-items-center" >
     <div class="row justify-content-center ">
-        <div class="ps-5 col-12 text-center " >
-            <p class="intro-text" id="introtext">         
+        <div class="ps-5 col-12 text-center d-flex justify-content-center align-items-center " >
+            <img src="../assets/teamlogo.png" alt="">
+            <!--<p class="intro-text" id="introtext">         
                 Pleiades
             </p>
-            <p class="sub-header" id="sub-text">ProjectWorks</p>
+            <p class="sub-header" id="sub-text">ProjectWorks</p>-->
         </div>
             <div id="moon" class="background-shape align-self-center"></div>
             <div id="moon2" class="background-shape-2 align-self-center"></div>
@@ -106,37 +62,36 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
 
-#starfield {
-    opacity: 0;
-    transition: all 1s;
-}
 
+.container{
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
 .dumbpy {
     height: 100vh;
 }
 
 canvas {
   
-    background: black;
+    background-color: #32295579;
     z-index: -1;
     position: absolute;
     width: 100vw;
     height: 100vh;
 }
 
-.intro-text{
-    padding-top:35vh ;
+img{
+    top: 30vh;
+    left: 37vw;
     color: white;
+    width: 25vw;
+    position: absolute;
     opacity: 1;
     z-index: 2;
     font-family: 'Ultra', sans-serif;
-    text-shadow:
-    /* White glow */
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff;
-    font-size: 5em;
-    transition: color .5s;
+    transition: all .5s;
+
+   
 }
 
 .sub-header{
@@ -164,14 +119,16 @@ canvas {
     position: fixed;
     filter: drop-shadow(0px 0px 15px rgb(255, 255, 255));
     animation: glow 5s infinite;
+    transition: all 1000ms;
     transition: margin 200ms;
-  
-    
+ 
+
 }
 
 .background-shape-2 {
 
-    background-color: black;
+
+    background-color: #241e3e;
 }
 
 .guide-wrapper {
@@ -193,6 +150,34 @@ canvas {
     100%{
         filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) ;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .intro-text{
+      
+        font-size: 3em;
+      
+    
+       
+    }
+
+    .sub-header{
+       
+        font-size: 2em;
+       
+    }
+
+    #starfield {
+        opacity: 0;
+        transition: all 1s;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+
 }
 
 

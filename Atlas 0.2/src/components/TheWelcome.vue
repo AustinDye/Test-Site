@@ -296,11 +296,7 @@ canvas{
 
 }
 
-img {
-    position: fixed;
-    top: 18vh;
-  
-}
+
 
 canvas {
     top: 10vh;

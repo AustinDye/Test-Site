@@ -8,6 +8,7 @@ export default {
     let landingDot = document.getElementById('dot-one');
     let aboutDot = document.getElementById('dot-two');
     let contactDot = document.getElementById('dot-three');
+    let body = document.getElementById('body');
   
     window.addEventListener('scroll', function(e) {
     
@@ -18,6 +19,7 @@ export default {
             landingDot.style.width = '20px';
             landingDot.style.height = '20px';
             landingDot.style.opacity = '.5';
+
            
       
             aboutDot.style.opacity = '1';
@@ -29,6 +31,8 @@ export default {
             landingDot.style.width = '35px';
             landingDot.style.height = '35px';
             landingDot.style.opacity = '1';
+
+           
 
             aboutDot.style.opacity = '.5';
             aboutDot.style.width = '20px';
@@ -47,29 +51,45 @@ export default {
 </script>
 
 <template>
+  <div class="container">
     <div class="guide-dots d-flex flex-column">
         <div id="dot-one" class="large-dot"></div>
         <div id="dot-two" class="medium-dot"></div>
         <div id="dot-three" class="small-dot"></div>
     </div>
+  </div>
 </template>
 
 <style scoped>
+.container {
+  width: 18vw;
+  height: 30vh;
+  background: #32295555;
+  
+  position: fixed;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  left: 5vh;
+  top: 10vh;
+}
+
 .guide-dots{
     position: fixed;
-  
-    z-index: 1;
+    z-index: 5;
     text-align: center;
     justify-content: center;
     align-items: center;
-    top: 20%;
-    left: 5vw;
+    top: 10%;
+    left: 1vw;
+
   }
   
   .small-dot, .medium-dot, .large-dot{
     background-color: white;
     border-radius: 100%;
     margin: 1em;
+    backdrop-filter: blur(5px);
+    
     
   }
   
@@ -81,12 +101,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: glow 5s infinite;
+
     transition: all .5s;
   
   }
   
   .large-dot::after{
+    
     content: "Landing";
     color: white;
     letter-spacing:.5em;
@@ -94,8 +115,8 @@ export default {
     font-weight: 900;
     padding-left: 14em;
     font-family: exo-2;
-    filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) ;
     
+
   }
   
   .medium-dot{
@@ -106,7 +127,8 @@ export default {
     justify-content: center;
     align-items: center;
     transition: all .5s;
-    animation: glow 5s infinite;
+
+    backdrop-filter: blur(5px);
   }
   
   .medium-dot::after{
@@ -117,7 +139,7 @@ export default {
     font-weight: 900;
     padding-left: 15em;
     font-family: exo-2;
-    filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) ;
+
     
   }
   
@@ -129,7 +151,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: glow 5s infinite;
+
   
   }
   
@@ -141,7 +163,7 @@ export default {
     font-weight: 900;
     padding-left: 14em;
     font-family: exo-2;
-    filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) ;
+
     
   }
   
@@ -160,6 +182,8 @@ export default {
     }
   }
 
+
+  
 
 
 </style>
