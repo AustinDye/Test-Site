@@ -113,8 +113,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
 .space-wrapper {
     min-height: 85vh;
-    
- 
+
 }
 
 .spacer{

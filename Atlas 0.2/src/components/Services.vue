@@ -97,7 +97,7 @@ export default {
   justify-content: end;
   align-items: center;
   background-image: url('../assets/Page 1.png');
-  padding-top:30vh;
+  padding-top:100vh;
   padding-left: 50vw;
 
  

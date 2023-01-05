@@ -19,14 +19,14 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: blue !important;
+  background: #322955 !important;
   filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
 
   transition: all 500ms;
 }
 
 .swiper-pagination-bullet {
-  background: rgba(0, 0, 255, 0.374) !important;
+  background: #322955  !important;
   height: 1em;
   width: 1em;
 }

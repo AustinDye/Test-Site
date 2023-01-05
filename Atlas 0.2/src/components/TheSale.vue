@@ -53,9 +53,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
-
+    padding: 10vh;
 
 }
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -65,10 +66,9 @@
     border-radius: 40px;
     position: absolute;
     bottom: -40vh;
- 
-    
 
 }
+
 h1{
     color: black;
     font-size: 4em;
@@ -76,17 +76,11 @@ h1{
     font-weight: bolder;
     padding-bottom: 5vh;
     width: 50vw;
-    position: absolute;
-  
-    top: 0;
-  
     
 }
 
 ul{
     width: 50vw;
-    position: absolute;
-    top: 15vh;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -109,11 +103,45 @@ span{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
-
-    top: 22.5vh;
     width: 50vw;
     font-size: 1.5em;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.211);
+    border-radius: 25px;
+    padding: 1em;
+ 
+}
+
+
+@media only screen and (max-width: 600px) {
+   .wrapper{
+        width: 100vw;
+       
+
+   }
+
+   ul{
+        width: 90%;
+        margin: 2em;
+   }
+
+   li{
+        font-size: 1em;
+   }
+
+   h1{
+        width: 100%;
+        font-size: 2em;
+   }
+   .body-one{
+        width: 100%;
+        font-size: 1em;
+        padding: 2em;
+   }
+   
+   .white-brick{
+        margin-top:85%;
+   }
  
 }
 </style>

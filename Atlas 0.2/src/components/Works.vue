@@ -24,7 +24,7 @@
 }
 
 .wrapper {
-    background-color: #4c85c17e;
+
     width: 65vw;
     height: 40vw;
     border-radius: 40px;
