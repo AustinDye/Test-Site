@@ -28,6 +28,7 @@ export default {
 </script>
 
 <template>
+
  <div class="containerr">
   
         <swiper
@@ -42,7 +43,7 @@ export default {
           
             <div class="slide-wrapper">
               <img src="../assets/Slice2.png" alt="">
-                <p class="first-slide">Custom Web Development</p>
+                <p class="slide-header">Custom Web Development</p>
                 <p class="slide-body">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolore,
                 quos, corporis veritatis illum quod sed voluptate amet dolor commodi similique 
@@ -55,7 +56,7 @@ export default {
 
           <div class="slide-wrapper">
             <img id="seo" src="../assets/seo-slice.png" alt="">
-              <p class="first-slide">Search Engine Optimization</p>
+              <p class="slide-header">Search Engine Optimization</p>
               <p class="slide-body">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolore,
               quos, corporis veritatis illum quod sed voluptate amet dolor commodi similique 
@@ -67,7 +68,7 @@ export default {
         <swiper-slide>
           <div class="slide-wrapper">
             <img id="fullstack" src="../assets/fullstack-slice.png" alt="">
-              <p class="first-slide">FullStack Development</p>
+              <p class="slide-header">FullStack Development</p>
               <p class="slide-body">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolore,
               quos, corporis veritatis illum quod sed voluptate amet dolor commodi similique 
@@ -78,7 +79,7 @@ export default {
       
       </swiper>
  
-   
+      
  </div>
 </template>
 
@@ -88,17 +89,30 @@ export default {
 
 
 .containerr {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../assets/space-bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-image: url('../assets/Page 1.png');
+  padding-top:30vh;
+  padding-left: 50vw;
 
  
+}
+
+.white-brick{
+  height: 66%;
+  width: 100%;
+  margin-top:20%;
+  position: absolute;
+  background: url('../assets/path5472.png');
+  z-index: -1;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 
@@ -113,7 +127,7 @@ export default {
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background-color: #32295555;
+
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -139,7 +153,6 @@ export default {
     z-index: -1;
     top: 1vh;
  
-
   }
 
 .slide-wrapper{
@@ -151,39 +164,31 @@ export default {
     align-items: center;
     position: absolute;
 
-   
- 
 }
-  
 
-.first-slide {
-    width: 100%;
+.slide-header {
+    width: 50vw;
     position: absolute;
-    color: white;
+    color: black;
     font-size: 2em;
     font-family: open-sans;
     font-weight: bolder;
     top: 55%;
-
     text-align: center;
     z-index: 1;
 }
 
 .slide-body {
-    width: 100vh;
+    width: 50vh;
     position: absolute;
-    top: 50%;
-    color: white;
+    top: 65%;
+    color: black;
     font-size:1em;
     font-family: open-sans;
     font-weight: bolder;
-    text-align: center;
-
-   
+    text-align: left;
     border-radius: 25px;
-    padding: 6em;
-    
-   
+  
     
 }
 .service-card {
@@ -196,7 +201,7 @@ export default {
 }
 
 /*.slogan{
-    color: white;
+    color: black;
     font-family: exo-2;
     font-size: 3em;
     padding-left: 8em;
@@ -206,11 +211,12 @@ export default {
 }*/
 
 #seo{
-  top: 12vh;
+  top: 13vh;
+  width: 38vw;
 }
 
 #fullstack{
-  top: 20vh;
+  top: 18vh;
   width: 38vw;
 }
 
@@ -225,13 +231,12 @@ export default {
     width: 90vw;
     top: 10vh;
    
-
   }
 
-  .first-slide {
+  .slide-header {
     width: 80vw;
     position: absolute;
-    color: white;
+    color: black;
     font-size: 3em;
     font-family: open-sans;
     font-weight: bolder;
@@ -260,10 +265,10 @@ export default {
 
   }
 
-  .first-slide {
+  .slide-header {
     width: 100%;
     position: absolute;
-    color: white;
+    color: black;
     font-size: 1.8em;
     font-family: open-sans;
     font-weight: bolder;
@@ -276,6 +281,16 @@ export default {
     top: 55%;
     padding: 1em;
     font-size: 1em;
+  }
+
+  #seo{
+    top: 20vh;
+    width: 90vw;
+  }
+  
+  #fullstack{
+    top: 24vh;
+    width: 90vw;
   }
 }
 

@@ -90,8 +90,6 @@ img{
     z-index: 2;
     font-family: 'Ultra', sans-serif;
     transition: all .5s;
-
-   
 }
 
 .sub-header{
@@ -106,9 +104,9 @@ img{
 }
 
 .space-circle, .space-circle-2{
-    top: 10vh;
-    width: 40vw; 
-    height: 40vw; 
+    top: 20vh;
+    width: 35vw; 
+    height: 35vw; 
     border-radius: 50% 50% 50% 50%;
     z-index: -1;
     background-color: white;
@@ -121,6 +119,7 @@ img{
     animation: glow 5s infinite;
     transition: all 1000ms;
     transition: margin 200ms;
+
  
 
 }
