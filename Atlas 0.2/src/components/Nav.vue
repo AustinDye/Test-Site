@@ -14,47 +14,47 @@ export default {
     
         let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-        if(scroll > 400 && scroll < 1700)
+        if(scroll > 400 && scroll < 3000)
         {
-            landingDot.style.width = '20px';
-            landingDot.style.height = '20px';
+            landingDot.style.width = '10px';
+            landingDot.style.height = '10px';
             landingDot.style.opacity = '.5';
 
            
       
             aboutDot.style.opacity = '1';
-            aboutDot.style.width = '35px';
-            aboutDot.style.height = '35px';
+            aboutDot.style.width = '20px';
+            aboutDot.style.height = '20px';
 
-            saleDot.style.width = '20px';
-            saleDot.style.height = '20px';
+            saleDot.style.width = '10px';
+            saleDot.style.height = '10px';
             saleDot.style.opacity = '.5';
             
         }
-        else if(scroll > 1700)
+        else if(scroll > 3000)
         {
-            saleDot.style.width = '35px';
-            saleDot.style.height = '35px';
+            saleDot.style.width = '20px';
+            saleDot.style.height = '20px';
             saleDot.style.opacity = '1';
 
             aboutDot.style.opacity = '.5';
-            aboutDot.style.width = '20px';
-            aboutDot.style.height = '20px';
+            aboutDot.style.width = '10px';
+            aboutDot.style.height = '10px';
         
         }
         else {
-            landingDot.style.width = '35px';
-            landingDot.style.height = '35px';
+            landingDot.style.width = '20px';
+            landingDot.style.height = '20px';
             landingDot.style.opacity = '1';
 
-            saleDot.style.width = '20px';
-            saleDot.style.height = '20px';
+            saleDot.style.width = '10px';
+            saleDot.style.height = '10px';
             saleDot.style.opacity = '.5';
            
 
             aboutDot.style.opacity = '.5';
-            aboutDot.style.width = '20px';
-            aboutDot.style.height = '20px';
+            aboutDot.style.width = '10px';
+            aboutDot.style.height = '10px';
      
         }
     });
@@ -70,25 +70,29 @@ export default {
 
 <template>
   <div class="container">
+    <img class="logo" src="../assets/teamlogo.png" alt="">
     <div class="guide-dots d-flex flex-column">
         <div id="dot-one" class="large-dot"></div>
         <div id="dot-two" class="small-dot"></div>
         <div id="dot-three" class="small-dot"></div>
+        <div id="dot-four" class="small-dot"></div>
     </div>
   </div>
 </template>
 
 <style scoped>
 .container {
-  width: 17vw;
-  height: 20vw;
-  background: #32295555;
+  width: 15vw;
+  height: 100vh;
+  background: #322955a2;
   padding: 1em;
   position: fixed;
-  border-radius: 25px;
-  backdrop-filter: blur(5px);
-  left: 5vh;
-  top: 10vh;
+  backdrop-filter: blur(10px);
+  left: 2vh;
+ 
+}
+.logo{
+  width: 100%;
 }
 
 .guide-dots{
@@ -97,9 +101,9 @@ export default {
     text-align: center;
     justify-content: center;
     align-items: center;
-    top: 10%;
-    left: 1vw;
+    top: 30%;
 
+ 
   }
   
   .small-dot, .medium-dot, .large-dot{
@@ -112,8 +116,8 @@ export default {
   
   .large-dot{
     
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -123,8 +127,8 @@ export default {
   }
 
   .small-dot{
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     opacity: .5;
     display: flex;
     justify-content: center;
@@ -138,9 +142,9 @@ export default {
     content: "Landing";
     color: white;
     letter-spacing:.5em;
-    font-size: 1em;
+    font-size: .9em;
     font-weight: 900;
-    padding-left: 14em;
+    padding-left: 10em;
     font-family: exo-2;
   }
 
@@ -148,9 +152,9 @@ export default {
     content: "Services";
     color: white;
     letter-spacing:.5em;
-    font-size: 1em;
+    font-size: .9em;
     font-weight: 900;
-    padding-left: 15em;
+    padding-left: 10.5em;
     font-family: exo-2;
   }
   
@@ -158,9 +162,20 @@ export default {
     content: "Works";
     color: white;
     letter-spacing:.5em;
-    font-size: 1em;
+    font-size: .9em;
     font-weight: 900;
-    padding-left: 14em;
+    padding-left: 8em;
+    font-family: exo-2;
+    
+  }
+
+  #dot-four::after{
+    content: "Contact";
+    color: white;
+    letter-spacing:.5em;
+    font-size: .9em;
+    font-weight: 900;
+    padding-left: 10em;
     font-family: exo-2;
     
   }

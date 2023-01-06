@@ -64,7 +64,7 @@ export default {
 
 
 .container{
-    padding-left: 10vw;
+    padding-left: 25vw;
     padding-right: 10vw;
 }
 .dumbpy {
@@ -82,7 +82,7 @@ canvas {
 
 img{
     top: 30vh;
-    left: 37vw;
+    left: 45vw;
     color: white;
     width: 25vw;
     position: absolute;

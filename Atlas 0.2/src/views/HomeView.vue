@@ -10,8 +10,7 @@ import Nav from '../components/Nav.vue'
   <main>
     <Landing />
     <TheSale />
-    <Services />
-   
-    <Works />
+     <!--<Services />-->
+   <Works />
   </main>
 </template>

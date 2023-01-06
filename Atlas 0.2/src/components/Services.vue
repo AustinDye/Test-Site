@@ -30,6 +30,7 @@ export default {
 <template>
 
  <div class="containerr">
+  <div class="wrapper">
   
         <swiper
         :spaceBetween="30"
@@ -81,6 +82,7 @@ export default {
  
       
  </div>
+</div>
 </template>
 
 <style scoped>
@@ -98,29 +100,18 @@ export default {
   align-items: center;
   background-image: url('../assets/Page 1.png');
   padding-top:100vh;
-  padding-left: 50vw;
+  padding-right:8vw ;
+ 
 
  
 }
 
-.white-brick{
-  height: 66%;
-  width: 100%;
-  margin-top:20%;
-  position: absolute;
-  background: url('../assets/path5472.png');
-  z-index: -1;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-
 .swiper {
-    width: 40vw;
+    width:40vw;
     height: 80vh;
-    border-radius: 40px;
+    border-radius: 60px;
     backdrop-filter: blur(5px);
+    color: black;
    
   }
   
@@ -167,10 +158,9 @@ export default {
 }
 
 .slide-header {
-    width: 50vw;
+    width: 80%;
     position: absolute;
-    color: black;
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: open-sans;
     font-weight: bolder;
     top: 55%;
@@ -179,18 +169,18 @@ export default {
 }
 
 .slide-body {
-    width: 50vh;
+    width: 30%;
     position: absolute;
     top: 65%;
-    color: black;
+    
     font-size:1em;
     font-family: open-sans;
     font-weight: bolder;
     text-align: left;
     border-radius: 25px;
   
-    
 }
+
 .service-card {
     width: 25vw;
     height: 75vh;
@@ -210,15 +200,6 @@ export default {
     filter: drop-shadow(0px 0px 15px rgb(255, 255, 255)) ;
 }*/
 
-#seo{
-  top: 13vh;
-  width: 38vw;
-}
-
-#fullstack{
-  top: 18vh;
-  width: 38vw;
-}
 
 @media only screen and (max-width: 1024px) {
   .swiper {
@@ -236,7 +217,6 @@ export default {
   .slide-header {
     width: 80vw;
     position: absolute;
-    color: black;
     font-size: 3em;
     font-family: open-sans;
     font-weight: bolder;
@@ -253,23 +233,36 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+  .wrapper{
+    position: relative;
+  }
+
+  .containerr{
+    padding-left: 0;
+    padding: 1em;
+    padding-top:0vh;
+   
+
+  }
   .swiper {
-    width: 100vw;
-    height: 80vh;
-  
+    width: 95vw;
+    height: 70vh;
+    background: rgba(0, 0, 0, 0.393);
+    color: white;
+    border-radius: 0;
+    top: 65vh;
+
   }
 
   .swiper-slide img {
     width: 100vw;
     top: 10vh;
-
   }
 
   .slide-header {
     width: 100%;
     position: absolute;
-    color: black;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-family: open-sans;
     font-weight: bolder;
     top: 48%;
@@ -277,10 +270,10 @@ export default {
   }
 
   .slide-body {
-    width: 100vw;
+    width: 100%;
     top: 55%;
-    padding: 1em;
-    font-size: 1em;
+    padding: 2em;
+    font-size: .9em;
   }
 
   #seo{
