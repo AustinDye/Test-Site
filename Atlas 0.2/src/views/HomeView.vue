@@ -14,3 +14,7 @@ import Nav from '../components/Nav.vue'
    <Works />
   </main>
 </template>
+
+<style scoped>
+
+</style>

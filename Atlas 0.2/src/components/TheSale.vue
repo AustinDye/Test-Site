@@ -4,25 +4,27 @@
 
 <template>
     <div class="containerr">
+        <div class="sash"></div>
       <div class="row wrapper">
         <div class="col-12 content-holder">
             <h1>Experts on the Web</h1>
             <div class="row sales-holder">
             
              
-                  <div class="col-4">
-                    <div class="card-holder">
-                        <img class="image-icon" id="seo" src="../assets/seo-slice.png" alt="">
+                  <div class="col-12">
+                    <div class="card-holder d-flex">
+                     
                         <div class="text-wrapper">
                             <b>Digital Experiences </b>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor iure saepe obcaecati accusamus, vel assumenda explicabo voluptas recusandae, quidem amet magni laudantium quam laboriosam. Eveniet maiores alias nemo soluta!</p>
                         </div>
+                        <img class="image-icon" id="seo" src="../assets/seo-slice.png" alt="">
                       
                     </div>
                   </div>
-                <div class="col-4">
-                    <div class="card-holder">
-                        <img class="image-icon" id="seo" src="../assets/seo-slice.png" alt="">
+                <div class="col-12">
+                    <div class="card-holder d-flex">
+                        <img class="image-icon" id="seo" src="../assets/fullstack-slice.png" alt="">
                         <div class="text-wrapper">
                             <b>Ecommerce</b>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor iure saepe obcaecati accusamus, vel assumenda explicabo voluptas recusandae, quidem amet magni laudantium quam laboriosam. Eveniet maiores alias nemo soluta!</p>
@@ -30,16 +32,17 @@
                       
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card-holder">
-                        <img class="image-icon" id="fullstack" src="../assets/seo-slice.png" alt="">
+                <div class="col-12">
+                    <div class="card-holder d-flex ">
                         <div class="text-wrapper">
                             <b>Digital Support</b>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor iure saepe obcaecati accusamus, vel assumenda explicabo voluptas recusandae, quidem amet magni laudantium quam laboriosam. Eveniet maiores alias nemo soluta!</p>
                         </div>
+                        <img class="image-icon" id="fullstack" src="../assets/slice2.png" alt="">
                       
                     </div>
                 </div>
+               
              
                
             </div>
@@ -64,8 +67,15 @@
 
 <style scoped>
 
+.sash{
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    bottom: 0;
+}
+
 .image-icon{
-    max-width: 25vw;
+    max-width: 35vw;
 }
 
 b{
@@ -86,7 +96,7 @@ b{
     height: 25vh;
     background: #ffb62583;
     backdrop-filter: blur(10px);
-    bottom: -100%;
+    bottom: -170vh;
     position: absolute;
     padding-left: 10vw;
 
@@ -99,7 +109,6 @@ b{
     justify-content: center;
     align-items: center;
     position: relative;
-    background: url('../assets/path5472.png');
     z-index: -1;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -124,10 +133,9 @@ b{
 
 h1{
  
-    color: black;
-    font-size: 7em;
-    font-family: exo-2;
-    font-weight: bolder;
+    color: white;
+    font-size: 9em;
+    font-family: geo-medium;
     padding-bottom: 5vh;
     text-align: center;
     padding-left: 15vw;
@@ -152,7 +160,7 @@ li{
 }
 
 .bg{
-    height: 100vh;
+    height: 160vh;
     width: 100vw;
     z-index: -2;
     position: absolute;
@@ -173,18 +181,23 @@ li{
 }
 
 .card-holder{
-    background: rgba(255, 243, 254, 0.593);
-    padding: 1em;
-    margin-bottom: 5em;
-    display: flex;
-    flex-direction: column;
+    padding: 3em;
     border-radius: 25px;
     backdrop-filter: blur(5px);
 }
 
 .text-wrapper{
-    
+  font-family: geo-light;
   height: 100%;
+}
+
+.text-wrapper b{
+    font-size: 3em;
+    font-family: geo-medium;
+}
+
+.text-wrapper p {
+    font-size: 1.2em;
 }
 
 .img-brand{
@@ -193,7 +206,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 40vw;
+    max-width: 25vw;
 }
 .img-brand img{
     width: 80%;

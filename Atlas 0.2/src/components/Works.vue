@@ -13,16 +13,17 @@
 <style scoped>
 .containerr {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     top: 100vh;
+    background: white;
     position: relative;
-    z-index: -1;
+    z-index: -2;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: end;
     align-items: center;
-    background: url('../assets/background.png');
+
 }
 
 </style>

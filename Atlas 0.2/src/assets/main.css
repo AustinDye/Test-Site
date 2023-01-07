@@ -15,7 +15,11 @@
   }
 
 @font-face {
-  font-family: andromeda;
-  src: url(AndromedaTV.ttf);
+  font-family: geo-medium;
+  src: url(geomanist-medium-italic-webfont.ttf);
+}
+@font-face {
+  font-family: geo-light;
+  src: url(geomanist-light-webfont.ttf);
 }
 
